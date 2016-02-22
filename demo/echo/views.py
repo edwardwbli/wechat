@@ -18,5 +18,6 @@ class EchoApp(WxApplication):
 @csrf_exempt
 def wechat(request):
     app = EchoApp()
+    #代码并未能如常返回用用户输入，而是遇到invalid request。
     result = app.process(request.GET, request.body)
     return HttpResponse(result)
