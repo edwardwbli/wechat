@@ -6,7 +6,7 @@ import time
 
 
 def kv2element(key, value, doc):
-    ‘’‘Create XML element according to the key value pairs, to be attached to dom tree’‘’
+    '''Create XML element according to the key value pairs, to be attached to dom tree'''
     ele = doc.createElement(key)
     if isinstance(value, str) or isinstance(value, unicode):
         data = doc.createCDATASection(value)
