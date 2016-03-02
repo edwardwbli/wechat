@@ -18,6 +18,7 @@ def kv2element(key, value, doc):
 
 
 def fields2elements(tupleObj, enclose_tag=None, doc=None):
+    '''Create XML elements according to the tuple of key pairs, to be attached to dom tree'''
     if enclose_tag:
         xml = doc.createElement(enclose_tag)
         for key in tupleObj._fields:
